@@ -37,7 +37,7 @@ export const WeatherProvider: FC<IProps> = ({ children, city }) => {
   const _getWeather = async ({ city }: { city: WeatherCities }): Promise<WeatherDay[]> => {
     const { dataseries } = await weatherAPI.getWeather({ city });
     const weatherDays = dataseries.map((weatherDay) => ({
-      image: '/weather_icons/' + weatherDay.weather + '.svg',
+      image: 'weather_icons/' + weatherDay.weather + '.svg',
       temperature: (weatherDay.temp2m.max + weatherDay.temp2m.min) / 2,
       description: weatherDay.weather,
       dateFormated: moment(`${weatherDay.date}`).format('ddd')

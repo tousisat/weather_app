@@ -1,6 +1,6 @@
 import { ThemeProvider } from '@mui/material';
 import { useSettings } from 'src/context/useSettings';
-import { BrowserRouter } from 'react-router-dom';
+import { HashRouter } from 'react-router-dom';
 import { SnackbarProvider } from 'notistack';
 
 import { createTheme } from 'src/theme';
@@ -22,10 +22,10 @@ const App: FC = () => {
   return (
     <ThemeProvider theme={theme}>
       <SnackbarProvider dense maxSnack={3}>
-        <BrowserRouter>
+        <HashRouter>
           <GlobalStyles />
           {navigation}
-        </BrowserRouter>
+        </HashRouter>
       </SnackbarProvider>
     </ThemeProvider>
   );
