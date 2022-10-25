@@ -19,3 +19,4 @@ In the project directory, you can run:
 
 - `npm dev`
 - `npm run build`
+- `npm run deploy`
